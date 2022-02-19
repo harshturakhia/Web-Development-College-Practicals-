@@ -1,0 +1,19 @@
+student 
+{ 
+    display :block; 
+    margin-top: 15px; 
+    color: blue;
+}
+    
+name 
+{ 
+    display : block; 
+    margin-left:40 px; 
+    margin-top: 30pt; 
+    color:red 
+}
+    
+firstname
+{ 
+    font-size: 28pt;
+} 

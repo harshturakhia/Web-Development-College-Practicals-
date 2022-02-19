@@ -1,0 +1,111 @@
+<?xml version = "1.0"?>
+<?xml-stylesheet type="text/css" href= "20BECE30275_17_XMLCSS.css"?>
+<?xml-stylesheet type = "text/xsl" href = 
+"20BECE30277_17_XML(XSL).xsl"?>
+<link rel="stylesheet" href="exp_17.css">
+
+<style>
+    student {
+        display: block;
+        margin-top: 15px;
+        color: blue;
+    }
+
+    name {
+        display: block;
+        margin-left: 40px;
+        margin-top: 30pt;
+        color: red
+    }
+
+    firstname {
+        font-size: 22pt;
+    }
+
+    lastname {
+        font-size: 22pt;
+    }
+
+    enroll {
+        display: block;
+        font-size: 24pt;
+        color: #100cec;
+    }
+
+    address {
+        display: block;
+        margin-left: 40px;
+        color: green
+    }
+
+    street {
+        display: block;
+        font-size: 18pt;
+    }
+
+    city {
+        display: block;
+        font-size: 18pt;
+    }
+
+    email {
+        display: block;
+        font-size: 18pt;
+        color: blue
+    }
+
+    phone {
+        display: block;
+        font-size: 18pt;
+    }
+</style>
+<students>
+    <student>
+        <name>
+            <firstname> Harsh </firstname>
+            <lastname> Turakhia </lastname>
+            <enroll>20BECE30269</enroll>
+        </name>
+        <address>
+            <street> Sector-15 </street>
+            <city> Gandhinagar </city>
+            <email> harsh007@gmail.com</email>
+            <phone> 000-000-0000 </phone>
+        </address>
+    </student>
+    <student>
+        <name>
+            <firstname> ABC </firstname>
+            <lastname> PQR </lastname>
+            <enroll>20BECE12345</enroll>
+        </name>
+        <address>
+            <street> M.G. Road </street>
+            <city> Junagadh </city>
+            <email> abc@gmail.com</email>
+            <phone> 000-000-0000 </phone>
+        </address>
+    </student>
+</students>
+
+<?xml version ="1.0"?> 
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns="http://www.w3.org/TR/xhtml1/strict">
+    <xsl:template match="/">
+        <h2> Student Record :- </h2>
+        <xsl:for-each select="students/student">
+            <br />
+            <span style="font-weight:bold;color:red"> FirstName: </span>
+            <xsl:value-of select="name/firstname" />
+            <span style="font-weight:bold;color:red"> LastName: </span>
+            <xsl:value-of select="name/lastname" /> <br />
+            <span style="font-weight:bold;color:green"> Street: </span>
+            <xsl:value-of select="address/street" /> <br />
+            <span style="font-weight:bold;color:green"> City: </span>
+            <xsl:value-of select="address/city" /> <br />
+            <span style="font-weight:bold;color:blue"> Email: </span>
+            <xsl:value-of select="address/email" /> <br />
+            <span style="font-weight:bold;color:green"> Phone: </span>
+            <xsl:value-of select="address/phone" /> <br />
+        </xsl:for-each>
+    </xsl:template>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number via PHP</title>
+</head>
+
+<body>
+    <form action="" method="post">
+        <table>
+            <tr>
+                <td>Enter your Name : </td>
+                <td><input type="text" name="number"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" name="submit" value="submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <?php
+        if(isset($_POST['submit']))
+        {
+            $num = $_POST['number'];
+            $PrimeFlag=0;
+
+            for($i=0; $i<$num; $i++)
+            {
+                $PrimeFlag=0;
+                if(($num%$i)==0)
+                {
+                    break;
+                }
+                $PrimeFlag=1;
+            }
+            if($PrimeFlag == 1)
+            {
+                echo " $num is Prime Number...";
+            }
+            else
+            {
+                echo "$num is not Prime Number...";
+            }
+        }
+        ?>
+</body>
+
+</html>

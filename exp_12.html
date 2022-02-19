@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+    <style>
+        #title {
+            font-family: 'Patrick Hand SC', sans-serif;
+            font-size: 3.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #calc-body {
+            border: 2px solid rgb(46, 42, 42);
+            height: 300px;
+            width: 300px;
+            position: absolute;
+            left: 50%;
+            top: 20%;
+            transform: translate(-50%, 0%);
+            padding: 8px 8px;
+        }
+
+        #screen {
+            width: 293px;
+            height: 35px;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+
+        .cal-but {
+            height: 60px;
+            width: 72px;
+            font-size: 2em;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="title">CALCULATOR</p>
+    <div id="calc-body">
+        <input type="text" id="screen" disabled />
+        <button class="cal-but" onclick="allclr()">AC</button>
+        <button class="cal-but" onclick="screenadd('1')">1</button>
+        <button class="cal-but" onclick="screenadd('2')">2</button>
+        <button class="cal-but" onclick="screenadd('3')">3</button>
+        <button class="cal-but" onclick="screenadd('+')">+</button>
+        <button class="cal-but" onclick="screenadd('4')">4</button>
+        <button class="cal-but" onclick="screenadd('5')">5</button>
+        <button class="cal-but" onclick="screenadd('6')">6</button>
+        <button class="cal-but" onclick="screenadd('-')">-</button>
+        <button class="cal-but" onclick="screenadd('7')">7</button>
+        <button class="cal-but" onclick="screenadd('8')">8</button>
+        <button class="cal-but" onclick="screenadd('9')">9</button>
+        <button class="cal-but" onclick="screenadd('/')">/</button>
+        <button class="cal-but" onclick="screenadd('*')">*</button>
+        <button class="cal-but" onclick="screenadd('0')">0</button>
+        <button class="cal-but" onclick="answer()">=</button>
+    </div>
+    <script>
+        var inp, screeninp, ans;
+        screeninp = document.getElementById("screen");
+        screeninp = "";
+        function screenadd(inp) {
+            screeninp += inp;
+            document.getElementById("screen").value = screeninp;
+        }
+        function answer() {
+            if (screeninp.length == 0 || screeninp == "") {
+                alert("Need some Input");
+            }
+            try {
+                ans = eval(screeninp);
+                document.getElementById("screen").value = ans;
+            }
+            catch {
+                alert("Invalid Input");
+            }
+        }
+        function allclr() {
+            screeninp = "";
+            document.getElementById("screen").value = "";
+        }
+    </script>
+</body>
+
+</html>

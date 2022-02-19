@@ -1,0 +1,37 @@
+*
+{
+    background-color: lightgray;
+}
+.heading, .p
+        {
+            
+            font-size: 30px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bolder;
+            font-display:initial ;
+            text-align: center;
+            text-decoration: underline;
+        }
+.btn
+        {
+            text-align: center;
+            border: 3px solid darkgreen;
+            border-radius: 10px;
+            cursor: pointer;
+            height: 100px;
+            width: 100%;
+            font-size: larger;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bolder;
+            color: red;
+            background-color: lightpink;
+            margin: 10px;
+        }
+#time
+        {
+            font-size: 30px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bolder;
+            font-display:initial ;
+            text-align: center;
+        }

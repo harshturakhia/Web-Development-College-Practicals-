@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+
+        }
+        .but
+        {
+
+            text-align: center;
+            font-family: serif;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: 2px solid rebeccapurple;
+            border-radius: 8px;
+            background-color: bisque;
+            color: darkcyan;
+            padding: 15px 30px;
+            /* display: inline-block; */
+            cursor: pointer;
+            font-size: 20px;
+            /* box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4); */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+    <button class="but"> Get me the Javascript Function Code Example</button>
+    </div>
+    <script>
+
+        let ans = document.querySelector('button');
+        ans.addEventListener('click', showans);
+
+        function showans() 
+        {
+            let num1 = prompt(' Enter the number : ');
+
+            // if (num1 % 2 == 0) 
+            // {
+            //     console.log(num1 + ' is even number');
+            //     //let ans = prompt('Even number ');
+            // }
+            // else 
+            // {
+            //     console.log(num1 + ' is odd number');
+            //     //let ans = prompt('Odd number ');
+            //     //ans.textContent = num1 + " is odd number" ;
+            // }
+
+            if (num1 % 2 == 0) 
+            {
+                alert(num1 + ' is even number');
+                //let ans = prompt('Even number ');
+            }
+            else 
+            {
+                alert(num1 + ' is odd number');
+                //let ans = prompt('Odd number ');
+                //ans.textContent = num1 + " is odd number" ;
+            }
+        }
+    </script>
+</body>
+
+</html>

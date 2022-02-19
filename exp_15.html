@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Img Rotate</title>
+</head>
+
+<body onload="setTimeout(rotateimg,8000)">
+    <div class="" align="center">
+        <img src="img_15.jpeg" id="img1">
+    </div>
+
+    <script>
+        var myVar = setInterval(rotateimg, 2000);
+        function rotateimg() {
+            document.getElementById('img1').style.transform += 'rotate(90deg)';
+        }
+    </script>
+</body>
+
+</html>
